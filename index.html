@@ -52,7 +52,20 @@
         /* tablet View */
         @media (min-width:768px) and  (max-width:991px) {
             .container {
-                display: block;
+                display: flex;
+                flex-flow: row wrap;
+                /* gap: 2%; */
+            }
+            #chicken{
+                flex-basis: 45%;
+                /* margin: 0; */
+            }
+            #beef{
+                flex-basis: 45%;
+                /* margin: 0; */
+            }
+            #sushi{
+                flex-basis: 100%;
             }
 
             
@@ -60,12 +73,16 @@
 
         /* Mobile View */
         @media (max-width:767px) {
-            .container:nth-child(1), .container:nth-child(2) {
+            /* .container:nth-child(1), .container:nth-child(2) {
                 flex-basis: 50%;
             }
 
             .container:nth-child(3) {
                 flex-basis: 100%;
+            } */
+
+            .container {
+                flex-direction: column;
             }
         }
 
@@ -75,19 +92,19 @@
 <body>
     <h1>Our Menu</h1>
     <div class="container">
-        <div>
+        <div id="chicken">
             <h3 >Chicken</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi quasi perspiciatis reprehenderit deserunt
                 quis et culpa nisi harum odit ut error expedita consequatur praesentium possimus explicabo ab reiciendis
                 rerum quo qui, nesciunt sunt fuga.</p>
         </div>
-        <div>
+        <div id="beef">
             <h3>Beef</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi quasi perspiciatis reprehenderit deserunt
                 quis et culpa nisi harum odit ut error expedita consequatur praesentium possimus explicabo ab reiciendis
                 rerum quo qui, nesciunt sunt fuga.</p>
         </div>
-        <div>
+        <div id="sushi">
             <h3 >Sushi</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi quasi perspiciatis reprehenderit deserunt
                 quis et culpa nisi harum odit ut error expedita consequatur praesentium possimus explicabo ab reiciendis
